@@ -104,11 +104,11 @@
 						<?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1 ) {
 							echo '<section>';
 								echo '<div class="success cf"><span class="logged-in-header">Logged In</span>';
-									echo '<form class="logout-form" method="post" action="/verify-login.php">
-											<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />
-											<input type="hidden" name="logout" value="1" />
-											<input class="button" type="submit" value="Log Out" />
-										</form>';
+									echo '<form class="logout-form" method="post" action="/verify-login.php">';
+										echo '<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />';
+										echo '<input type="hidden" name="logout" value="1" />';
+										echo '<input class="button" type="submit" value="Log Out" />';
+										echo '</form>';
 								echo '</div>';
 							echo '</section>';
 
