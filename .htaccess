@@ -1,5 +1,4 @@
-RewriteRule ^verify-login.html$ $0 [L]
-RewriteRule ^contact/verify.html$ $0 [L]
+RewriteRule ^contact/verify.php$ $0 [L]
 
 Options +FollowSymLinks -MultiViews
 

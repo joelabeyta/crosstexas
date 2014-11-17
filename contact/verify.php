@@ -1,5 +1,4 @@
 <?php session_start();
-
 	// store some session variables to repopulate form if errors occur
 	$_SESSION['field_1_required'] = $_POST['field_1_required'];
 	$_SESSION['field_2_required'] = $_POST['field_2_required'];
@@ -14,10 +13,10 @@
     // recaptcha stuff
 	require_once('recaptchalib.php');
 	// .dev
-	// $privatekey = "6LcA2_0SAAAAABmf0HJiimFt4urReHpAHQCyuEFg";
+	$privatekey = "6LcA2_0SAAAAABmf0HJiimFt4urReHpAHQCyuEFg";
 
 	// .crane-west.net
-	$privatekey = "6Lcf4_0SAAAAAHPHHMDyfXHIPNzKHZv5RLh8IsQu";
+	// $privatekey = "6Lcf4_0SAAAAAHPHHMDyfXHIPNzKHZv5RLh8IsQu";
 
 	//.com
 	// $privatekey = "6Lemmf0SAAAAAG0J-KoeHKiIS6gfrA_G-YFBRDKZ";

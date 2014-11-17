@@ -289,10 +289,10 @@
 											<?php
 												require_once('recaptchalib.php');
 												// .dev
-												// $publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
+												$publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
 
 												// .crane-west.net
-												$publickey = "6Lcf4_0SAAAAAKYRum6Jp-3qqeHN74UaAs6gBw-j";
+												// $publickey = "6Lcf4_0SAAAAAKYRum6Jp-3qqeHN74UaAs6gBw-j";
 
 												// .com
 												// $publickey = "6Lemmf0SAAAAAMap-pgMHtzsqrLk1SHVQtOLil9l";
@@ -303,14 +303,14 @@
 
 										<input class="button" type="submit" value="Submit" />
 									</form>
-									</section>
+								</section>
 
-									<section>
-										<h3 class="section-title part-green">Frequently Asked <b>Questions</b></h3>
-										<p>If you have a specific question, please check our frequently asked questions section by clicking <a href="/faqs/">here</a>.</p>
-									</section>
-								</div>
+								<section>
+									<h3 class="section-title part-green">Frequently Asked <b>Questions</b></h3>
+									<p>If you have a specific question, please check our frequently asked questions section by clicking <a href="/faqs/">here</a>.</p>
+								</section>
 							</div>
+						</div>
 
 
 							<div class="contact row">
