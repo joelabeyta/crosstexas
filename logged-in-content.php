@@ -61,7 +61,7 @@
 		<div class="row">
 			<label class="medium-3 large-3 columns" for="field_text">Comments</label>
 			<div class="medium-9 large-9 columns">
-				<textarea id="field_text" name="field_text" <?php if(isset($_SESSION['field_text'])) { echo 'value="'.$_SESSION['field_text'].'"'; } ?> ></textarea>
+				<textarea id="field_text" name="field_text" ><?php if(isset($_SESSION['field_text'])) { echo $_SESSION['field_text']; } ?></textarea>
 			</div>
 		</div>
 
