@@ -70,7 +70,7 @@ Content-Type: text/plain; charset="iso-8859-1"
 Content-Transfer-Encoding: 7bit
 
 			<?php
-				if(!empty($_POST['field_1'])) { echo $_POST['field_1']." "; }
+				if(!empty($_POST['field_1'])) { echo "Name: ".$_POST['field_1']." "; }
 				if(!empty($_POST['field_2'])) { echo $_POST['field_2']."\r\n"; }
 
 				if(!empty($_POST['field_3'])) { echo "Email: ".$_POST['field_3']."\r\n"; }
@@ -84,7 +84,7 @@ Content-Transfer-Encoding: 7bit
 
 			<?php
 				echo '<p>';
-					if(!empty($_POST['field_1'])) { echo $_POST['field_1'].' '; }
+					if(!empty($_POST['field_1'])) { echo 'Name: '.$_POST['field_1'].' '; }
 					if(!empty($_POST['field_2'])) { echo $_POST['field_2']; }
 				echo '</p>';
 
