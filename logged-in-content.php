@@ -39,22 +39,21 @@
 		<div class="row">
 			<label class="medium-3 large-3 columns <?php if(isset($_GET['field_1'])) { echo 'error'; } ?>" for="field_1">First Name&dagger;</label>
 			<div class="medium-9 large-9 columns">
-				<input id="field_1" <?php if(isset($_GET['field_1'])) { echo 'class="error"'; } if(isset($_SESSION['field_1'])) { echo 'value="'.$_SESSION['field_1_required'].'"'; } ?> name="field_1_required" type="text" />
-				
+				<input id="field_1" <?php if(isset($_GET['field_1'])) { echo 'class="error"'; } if(isset($_SESSION['field_1'])) { echo 'value="'.$_SESSION['field_1_required'].'"'; } ?> name="field_1" type="text" />
 			</div>
 		</div>
 
 		<div class="row">
 			<label class="medium-3 large-3 columns <?php if(isset($_GET['field_2'])) { echo 'error'; } ?>" for="field_2">Last Name&dagger;</label>
 			<div class="medium-9 large-9 columns">
-				<input id="field_2" <?php if(isset($_GET['field_2'])) { echo 'class="error"'; } if(isset($_SESSION['field_2'])) { echo 'value="'.$_SESSION['field_2'].'"'; } ?> name="field_2_required" type="text" />
+				<input id="field_2" <?php if(isset($_GET['field_2'])) { echo 'class="error"'; } if(isset($_SESSION['field_2'])) { echo 'value="'.$_SESSION['field_2'].'"'; } ?> name="field_2" type="text" />
 			</div>
 		</div>
 
 		<div class="row">
 			<label class="medium-3 large-3 columns <?php if(isset($_GET['field_3'])) { echo 'error'; } ?>" for="field_3">Email&dagger;</label>
 			<div class="medium-9 large-9 columns">
-				<input id="field_3" <?php if(isset($_GET['field_3'])) { echo 'class="error"'; } if(isset($_SESSION['field_3'])) { echo 'value="'.$_SESSION['field_3'].'"'; } ?> name="field_3_required" type="email" />
+				<input id="field_3" <?php if(isset($_GET['field_3'])) { echo 'class="error"'; } if(isset($_SESSION['field_3'])) { echo 'value="'.$_SESSION['field_3'].'"'; } ?> name="field_3" type="email" />
 			</div>
 		</div>
 
