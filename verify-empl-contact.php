@@ -46,7 +46,8 @@
 
 			// email stuff here
 			//define the receiver of the email
-			$to = 'joel@crane-west.net, BChoate@marketwave.biz';
+			// $to = 'joel@crane-west.net, BChoate@marketwave.biz';
+			$to = 'joel@crane-west.net';
 
 			//define the subject of the email
 			$subject = 'crosstexas.com Contact Form submission from '.$_POST['field_5_required']; 
