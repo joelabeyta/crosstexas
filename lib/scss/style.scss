@@ -525,6 +525,12 @@ blockquote {
 	.page-content {
 		margin: 30px auto 60px;
 
+		&.large-12 {
+			section {
+				padding: 0 15px;
+			}
+		}
+
 		.section-title {
 			margin-left: 45px;
 			margin-top: -5px;
