@@ -26,7 +26,7 @@
 		} else {
 			$_SESSION['logged_in'] = 0;
 
-			$warnings = '?fail=1';
+			$warnings = '?fail=99';
 			$url = strtok($_POST['contact_page'], '?').$warnings;
 			header( "Location: $url" );
 		}		

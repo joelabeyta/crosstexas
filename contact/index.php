@@ -106,7 +106,7 @@
 							if(isset($_GET['fail']) && $_GET['fail'] == 2) { echo '<div class="warning">Please fill in all required fields.</div>'; }
 							if(isset($_GET['fail']) && $_GET['fail'] == 3) { echo '<div class="warning">Something went wrong. Please try again later.</div>'; }
 							if(isset($_GET['success']) && $_GET['success'] == 1) { echo '<div class="success">Thank you for you comments. We will get back with you shortly.</div>'; }
-							?>		
+							?>
 						</section>
 
 						<h3 class="section-title part-green">Get In <b>Touch</b> With Cross Texas</h3>
@@ -290,7 +290,7 @@
 												};
 											</script>
 											<?php
-												require_once('recaptchalib.php');
+												require_once('../recaptchalib.php');
 												// .dev
 												// $publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
 
@@ -356,7 +356,7 @@
 								<div class="medium-6 large-6 columns">
 									<img class="footer-logo" src="/img/footer-logo.png" alt="" />
 
-									<a class="login" href="/login.html">Employee Login</a>
+									<a class="login" href="/login.php">Employee Login</a>
 
 									<p class="footer-info">Copyright &copy; 2014 | <a href="/contact/">Contact Us</a> | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/regulatory-notices.html" >Regulatory Notices</a></p>
 								</div>
