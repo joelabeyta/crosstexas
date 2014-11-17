@@ -152,6 +152,9 @@
 											<div class="medium-9 large-9 columns">
 												<select id="inquiry-type" name="inquiry_type">
 													<option value="general-inquiry">General Inquiry</option>
+													<option value="public-relations-media-inquiry">Public Relations/Media Inquiry</option>
+													<option value="potential-service-provider">Potential Service Provider</option>
+													<option value="potential-transaction-provider">Potential Transaction Provider</option>
 												</select>
 											</div>
 										</div>
