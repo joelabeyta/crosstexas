@@ -23,7 +23,17 @@
 		<script src="/js/modernizr.js"></script>
 	</head>
 	<body class="cross-texas-employee-login">
-
+		<?php 
+			function curPageURL() {
+				$pageURL = 'http://';
+				if ($_SERVER["SERVER_PORT"] != "80") {
+					$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+				} else {
+					$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+				}
+				return $pageURL;
+			}
+		?>	
 		<header role="banner" style="background-image: url(/img/cross-texas-employee-login-bg.jpg);">
 			<div class="contain-to-grid">
 				<nav class="top-bar" data-topbar role="navigation">
@@ -105,7 +115,7 @@
 							echo '<section>';
 								echo '<div class="success cf"><span class="logged-in-header">Logged In</span>';
 									echo '<form class="logout-form" method="post" action="/verify-login.php">';
-										echo '<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />';
+										echo '<input type="hidden" name="contact_page" value="'.curPageURL().'" />';
 										echo '<input type="hidden" name="logout" value="1" />';
 										echo '<input class="button" type="submit" value="Log Out" />';
 										echo '</form>';
@@ -122,18 +132,7 @@
 						} else { ?>
 						
 						<section>
-							<form class="login-form" method="post" action="/verify-login.php">
-								<?php 
-									function curPageURL() {
-										$pageURL = 'http://';
-										if ($_SERVER["SERVER_PORT"] != "80") {
-											$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-										} else {
-											$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-										}
-										return $pageURL;
-									}
-								?>							
+							<form class="login-form" method="post" action="/verify-login.php">						
 								<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />
 
 								<div class="row">
