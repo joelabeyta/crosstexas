@@ -27,7 +27,7 @@
 		<div class="row">
 			<label class="medium-3 large-3 columns" for="inquiry-type">Choose one*</label>
 			<div class="medium-9 large-9 columns">
-				<select id="inquiry-type" name="inquiry_type">
+				<select id="inquiry-type" name="inquiry_type" <?php if(isset($_GET['inquiry_type'])) { echo 'class="error"'; } ?>>
 					<option value="">Choose One:</option>
 					<option class="select-dash" disabled="disabled">----</option>
 					<option value="suggestion-comment">Suggestion/Comment</option>
@@ -40,7 +40,7 @@
 		<div class="row">
 			<label class="medium-3 large-3 columns <?php if(isset($_GET['field_1'])) { echo 'error'; } ?>" for="field_1">First Name&dagger;</label>
 			<div class="medium-9 large-9 columns">
-				<input id="field_1" <?php if(isset($_GET['field_1'])) { echo 'class="error"'; } if(isset($_SESSION['field_1'])) { echo 'value="'.$_SESSION['field_1'].'"'; } ?> name="field_1" type="text" />
+				<input id="field_1" <?php if(isset($_SESSION['field_1'])) { echo 'value="'.$_SESSION['field_1'].'"'; } ?> name="field_1" type="text" />
 			</div>
 		</div>
 
@@ -59,9 +59,10 @@
 		</div>
 
 		<div class="row">
-			<label class="medium-3 large-3 columns" for="field_text">Comments</label>
+			<label class="medium-3 large-3 columns" for="field_text">Comments*</label>
 			<div class="medium-9 large-9 columns">
-				<textarea id="field_text" name="field_text" placeholder="Please provide an overview of your feedback with as much detail as possible." ><?php if(isset($_SESSION['field_text'])) { echo $_SESSION['field_text']; } ?></textarea>
+				<textarea id="field_text" name="field_text" placeholder="Please provide an overview of your feedback with as much detail as possible."  <?php if(isset($_GET['field_text'])) { echo 'class="error"'; } ?>><?php if(isset($_SESSION['field_text'])) { echo $_SESSION['field_text']; } ?></textarea>
+				<?php if(isset($_GET['field_text'])) { echo '<small class="error">Required Field</small>'; } ?>
 			</div>
 		</div>
 
