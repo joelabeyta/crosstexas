@@ -17,9 +17,9 @@
 	<link rel="stylesheet" href="/custom-styles.css" />
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="/css/ie.css" />
-	<![endif]-->
+		<![endif]-->
 
-	<script src="/js/modernizr.js"></script>
+		<script src="/js/modernizr.js"></script>
 	</head>
 	<body class="cross-texas-employee-login">
 
@@ -101,22 +101,21 @@
 						<section>
 						</section>
 
-
 						<section>
-							<form class="login-form" method="post" action="/verify-login.php">
+							<form class="login-form pushalignright" method="post">
 								<input type="hidden" name="contact_page" value="http://crosstexas.dev/login/" />
 
 								<div class="row">
 									<label class="medium-3 large-3 columns" for="user_name">User Name</label>
-									<div class="medium-9 large-9 columns"><input id="user_name" name="user_name" type="text" /></div>
+									<div class="medium-9 large-9 columns"><input class="forcealignleft" id="user_name" name="user_name" type="text" /></div>
 								</div>
 
 								<div class="row">
 									<label class="medium-3 large-3 columns" for="user_pass">Password</label>
-									<div class="medium-9 large-9 columns"><input id="user_pass" name="user_pass" type="text" /></div>
+									<div class="medium-9 large-9 columns"><input class="forcealignright" id="user_pass" name="user_pass" type="text" /></div>
 								</div>
 
-								<input class="button" type="submit" value="Log In" />
+								<input class="login-button button" type="submit" value="Log In" />
 							</form>
 						</section>
 
@@ -158,5 +157,18 @@
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 			<script src="/js/production.min.js"></script>
 			<script src="/custom-js.js"></script>
+			<script>
+				$(document).ready(function(){
+					var loggedin = $.cookie('cw_lic');
+					console.log('cookie = '.loggedin);
+					if(loggedin === '1') {
+						window.location = "/logged-in.html";
+					} else if(loggedin === '0') {
+						$('.page-content').prepend('<section><div class="warning">Incorrect User Name and/or Password. Please try again.</div></section>');
+					} else if(loggedin === '3') {
+						$('.page-content').prepend('<section><div class="success">Logged out successfully.</div></section>');
+					}
+				}); 
+			</script>
 		</body>
 		</html>

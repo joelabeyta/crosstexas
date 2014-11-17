@@ -281,6 +281,21 @@ form.login-form {
 	}
 }
 
+.logout-button-container {
+	padding: 0 60px;
+}
+
+.logout-button{
+	display: block;
+	background-color: $green;
+	float: right;
+	@include border-radius(5px);
+
+	&:hover {
+		background-color: darken($green, 10%);
+	}
+}
+
 blockquote {
 	position: relative;
 	border: 0;
