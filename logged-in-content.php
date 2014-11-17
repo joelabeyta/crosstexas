@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <section>
 	<?php 
 	if(isset($_GET['fail']) && $_GET['fail'] == 1) { echo '<div class="warning">reCAPTCHA blank or entered incorrectly.<br>Please try again.<br><small>ERROR: '.$_GET['error'].'</small></div>'; }
@@ -39,7 +40,7 @@
 		<div class="row">
 			<label class="medium-3 large-3 columns <?php if(isset($_GET['field_1'])) { echo 'error'; } ?>" for="field_1">First Name&dagger;</label>
 			<div class="medium-9 large-9 columns">
-				<input id="field_1" <?php if(isset($_GET['field_1'])) { echo 'class="error"'; } if(isset($_SESSION['field_1'])) { echo 'value="'.$_SESSION['field_1_required'].'"'; } ?> name="field_1" type="text" />
+				<input id="field_1" <?php if(isset($_GET['field_1'])) { echo 'class="error"'; } if(isset($_SESSION['field_1'])) { echo 'value="'.$_SESSION['field_1'].'"'; } ?> name="field_1" type="text" />
 			</div>
 		</div>
 
