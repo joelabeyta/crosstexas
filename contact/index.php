@@ -289,10 +289,10 @@
 											<?php
 												require_once('recaptchalib.php');
 												// .dev
-												$publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
+												// $publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
 
 												// .crane-west.net
-												// $publickey = "6Lczm_0SAAAAAAd5XEVYKQrAHafiNvULnvcLVf6F";
+												$publickey = "6Lcf4_0SAAAAAKYRum6Jp-3qqeHN74UaAs6gBw-j";
 
 												// .com
 												// $publickey = "6Lemmf0SAAAAAMap-pgMHtzsqrLk1SHVQtOLil9l";

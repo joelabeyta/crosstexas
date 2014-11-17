@@ -14,10 +14,10 @@
     // recaptcha stuff
 	require_once('recaptchalib.php');
 	// .dev
-	$privatekey = "6LcA2_0SAAAAABmf0HJiimFt4urReHpAHQCyuEFg";
+	// $privatekey = "6LcA2_0SAAAAABmf0HJiimFt4urReHpAHQCyuEFg";
 
 	// .crane-west.net
-	// $privatekey = "6Lczm_0SAAAAABWLnn9deD34dPPbRP3kIlLmdhzZ";
+	$privatekey = "6Lcf4_0SAAAAAHPHHMDyfXHIPNzKHZv5RLh8IsQu";
 
 	//.com
 	// $privatekey = "6Lemmf0SAAAAAG0J-KoeHKiIS6gfrA_G-YFBRDKZ";
