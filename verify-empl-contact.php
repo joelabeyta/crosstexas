@@ -84,8 +84,8 @@ Content-Transfer-Encoding: 7bit
 
 			<?php
 				echo '<p>';
-					if(!empty($_POST['field_1'])) { $_POST['field_1'].' '; }
-					if(!empty($_POST['field_2'])) { $_POST['field_2']; }
+					if(!empty($_POST['field_1'])) { echo $_POST['field_1'].' '; }
+					if(!empty($_POST['field_2'])) { echo $_POST['field_2']; }
 				echo '</p>';
 
 				if(!empty($_POST['field_3'])) { echo '<Email: '.$_POST['field_3'].'<br>'; }
