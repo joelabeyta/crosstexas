@@ -24,15 +24,15 @@
 	</head>
 	<body class="cross-texas-employee-login">
 		<?php 
-			// function curPageURL() {
-			// 	$pageURL = 'http://';
-			// 	if ($_SERVER["SERVER_PORT"] != "80") {
-			// 		$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-			// 	} else {
-			// 		$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-			// 	}
-			// 	return $pageURL;
-			// }
+			function cw_curPageURL() {
+				$pageURL = 'http://';
+				if ($_SERVER["SERVER_PORT"] != "80") {
+					$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+				} else {
+					$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+				}
+				return $pageURL;
+			}
 		?>	
 		<header role="banner" style="background-image: url(/img/cross-texas-employee-login-bg.jpg);">
 			<div class="contain-to-grid">
@@ -115,7 +115,7 @@
 							echo '<section>';
 								echo '<div class="success cf"><span class="logged-in-header">Logged In</span>';
 									echo '<form class="logout-form" method="post" action="/verify-login.php">';
-										echo '<input type="hidden" name="contact_page" value="'.curPageURL().'" />';
+										echo '<input type="hidden" name="contact_page" value="'.cw_curPageURL().'" />';
 										echo '<input type="hidden" name="logout" value="1" />';
 										echo '<input class="button" type="submit" value="Log Out" />';
 										echo '</form>';
@@ -133,7 +133,7 @@
 						
 						<section>
 							<form class="login-form" method="post" action="/verify-login.php">						
-								<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />
+								<input type="hidden" name="contact_page" value="<?php echo cw_curPageURL(); ?>" />
 
 								<div class="row">
 									<label class="medium-3 large-3 columns" for="user_name">User Name</label>
