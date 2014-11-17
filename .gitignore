@@ -2,5 +2,4 @@
 *node_modules/
 *sass-cache/
 *.log
-.htaccess
 js/production.js
