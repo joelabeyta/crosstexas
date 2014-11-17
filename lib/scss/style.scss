@@ -259,6 +259,33 @@ label {
 	margin: 0;
 }
 
+.logged-in-header {
+	display: inline-block;
+	width: 50%;
+}
+
+form.logout-form {
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+
+	input[type=submit] {
+		background-color: transparent;
+		padding: 0 35px 0 0!important;
+		margin: 0;
+		background: right center no-repeat url(/img/logout-icon.png);
+		@include opacity(.5);
+		@include transition(.25s);
+		@include transform(scale(.875));
+
+		&:hover {
+			@include opacity(1);
+			@include transition(.25s);
+			@include transform(scale(1));
+		}
+	}
+}
+
 form.contact-form,
 form.login-form {
 	margin-bottom: 60px;

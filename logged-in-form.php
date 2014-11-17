@@ -92,12 +92,3 @@
 		<input class="button" type="submit" value="Submit" />
 	</form>
 </section>
-
-
-<form class="login-form" method="post" action="/verify-login.php">
-	
-	<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />
-	<input type="hidden" name="logout" value="1" />
-
-	<input class="button" type="submit" value="Log Out" />
-</form>

@@ -102,7 +102,15 @@
 						<?php if(isset($_GET['fail']) && $_GET['fail'] == 99) { echo '<section><div class="warning">Incorrect username and/or password. Please try again.</div></section>'; } ?>
 						
 						<?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1 ) {
-							echo '<section><div class="success">Logged In</div></section>';
+							echo '<section>';
+								echo '<div class="success cf"><span class="logged-in-header">Logged In</span>';
+									echo '<form class="logout-form" method="post" action="/verify-login.php">
+											<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />
+											<input type="hidden" name="logout" value="1" />
+											<input class="button" type="submit" value="Log Out" />
+										</form>';
+								echo '</div>';
+							echo '</section>';
 
 							echo '<section>';
 								include('logged-in-content.html');
