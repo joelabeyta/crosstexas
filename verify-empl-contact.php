@@ -37,6 +37,10 @@
 				$warnings .= '&inquiry_type=1';
 			}
 
+			if(empty($_POST['field_text'])) {
+				$warnings .= '&field_text=1';
+			}
+
 			$url = strtok($_POST['contact_page'], '?').$warnings;
 
 			header( "Location: $url" );
