@@ -24,15 +24,15 @@
 	</head>
 	<body class="cross-texas-employee-login">
 		<?php 
-			function curPageURL() {
-				$pageURL = 'http://';
-				if ($_SERVER["SERVER_PORT"] != "80") {
-					$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-				} else {
-					$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-				}
-				return $pageURL;
-			}
+			// function curPageURL() {
+			// 	$pageURL = 'http://';
+			// 	if ($_SERVER["SERVER_PORT"] != "80") {
+			// 		$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+			// 	} else {
+			// 		$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+			// 	}
+			// 	return $pageURL;
+			// }
 		?>	
 		<header role="banner" style="background-image: url(/img/cross-texas-employee-login-bg.jpg);">
 			<div class="contain-to-grid">
