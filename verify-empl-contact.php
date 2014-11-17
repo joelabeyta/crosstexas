@@ -1,4 +1,8 @@
 <?php session_start();
+	echo '<pre>';
+	print_r($_POST);
+	die;
+
 	// store some session variables to repopulate form if errors occur
 	$_SESSION['inquiry_type'] = $_POST['inquiry_type'];
 
