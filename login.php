@@ -105,7 +105,11 @@
 							echo '<section><div class="success">Logged In</div></section>';
 
 							echo '<section>';
-								include('logged-in-content.php');
+								include('logged-in-content.html');
+							echo '</section>';
+
+							echo '<section>';
+								include('logged-in-form.php');
 							echo '</section>';
 						} else { ?>
 						
