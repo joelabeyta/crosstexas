@@ -4,24 +4,23 @@
 <!--[if IE 8]> <html style="margin-top: 0!important;" class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html style="margin-top: 0!important;" class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- TemplateBeginEditable name="doctitle" -->
-	<title>Cross Texas | Texas Energy</title>
-	<!-- TemplateEndEditable -->
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="author" href="/humans.txt">
-	<link rel="dns-prefetch" href="//ajax.googleapis.com">
-
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/style.css?v=130111514" />
-	<link rel="stylesheet" href="/custom-styles.css" />
-	<!--[if lt IE 9]>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Cross Texas | Texas Energy</title>
+<!-- TemplateEndEditable -->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="author" href="/humans.txt">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/style.css?v=130111514" />
+<link rel="stylesheet" href="/custom-styles.css" />
+<!--[if lt IE 9]>
 		<link rel="stylesheet" href="/css/ie.css" />
 	<![endif]-->
-	
-	<script src="/js/modernizr.js"></script>
-	
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="/js/modernizr.js"></script>
+<!-- TemplateParam name="txEnergyMarket" type="boolean" value="false" -->
 </head>
 <body class="texas-energy">
 
@@ -149,7 +148,8 @@
 				</div>
 			</div>
 		</div>
-
+        
+		<!-- TemplateBeginIf cond="txEnergyMarket" -->
 		<div class="row te-market">
 			<h3 class="borders green">How the <b>Texas Electric Market</b> works</h3>
 			<div class="large-12 columns cw-tabs-container">
@@ -181,6 +181,7 @@
 				</div>
 			</div>
 		</div>
+        <!-- TemplateEndIf -->
 	</div> <!-- end [role="main"] -->
 	
 	<footer role="contentinfo">

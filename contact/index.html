@@ -18,7 +18,7 @@
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="/css/ie.css" />
 <![endif]-->
-
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="/js/modernizr.js"></script>
 </head>
 <body class="contact">
@@ -271,29 +271,15 @@
 						<p class="required">Required Field*</p>
 
 						<div class="captcha">
-							[captcha]
-							<script type="text/javascript">
-								// var RecaptchaOptions = {
-								// 	theme : 'clean'
-								// };
-							</script>
-							<!-- require_once('../recaptchalib.php');
-							// .dev
-							// $publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
 
-							// .crane-west.net
-							$publickey = "6Lcf4_0SAAAAAKYRum6Jp-3qqeHN74UaAs6gBw-j";
-
-							// .com
-							// $publickey = "6Lemmf0SAAAAAMap-pgMHtzsqrLk1SHVQtOLil9l";
-
-							echo recaptcha_get_html($publickey); -->
 						</div>
 
 						<input type="submit" name="Submit" id="Submit" value="Submit" />
 						<input type="hidden" name="hdwemail" id="hdwemail" value="cfredkin+lspower.com" />
 						<input type="hidden" name="hdwok" id="hdwok" value="thanks.htm" />
 						<input type="hidden" name="hdwnook" id="hdwnook" value="error.htm" />
+						
+						<div class="g-recaptcha" data-sitekey="6Lemmf0SAAAAAMap-pgMHtzsqrLk1SHVQtOLil9l"></div>
 					</form>
 				</section>
 
