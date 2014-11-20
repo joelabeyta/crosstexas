@@ -30,7 +30,7 @@
   '** send CC to another emails, separated by semicolon,                                           *
   '** example: Const HDW_SEND_CC_TO = "email-1@domain.com;email-2@domain.com"                      *
   '*************************************************************************************************
-  Const HDW_SEND_CC_TO = "joel@crane-west/net"
+  Const HDW_SEND_CC_TO = "jbova@lspower.com"
   
 
   '*************************************************************************************************
