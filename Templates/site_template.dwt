@@ -27,7 +27,7 @@
 
 	<header role="banner">
 		<!-- TemplateBeginEditable name="HeaderImage" -->
-		<img class="header-image hide" src="/img/about-bg.jpg" />
+		<img class="header-image" src="/img/about-bg.jpg" />
 		<!-- TemplateEndEditable -->
 		<div class="contain-to-grid">
 			<nav class="top-bar" data-topbar role="navigation">
@@ -146,6 +146,38 @@
 					<div class="contact-section medium-6 large-6 columns">
 						<a class="contact-button button" href="/regulatory-notices.html">View Notices</a>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row te-market">
+			<h3 class="borders green">How the <b>Texas Electric Market</b> works</h3>
+			<div class="large-12 columns cw-tabs-container">
+				<ul class="styleless cw-tabs-list">
+					<li id="tab-generation" class="cw-tabs generation" data-tab="generation">
+						<img src="/img/generation.png" alt="" />
+					</li>
+						
+					<li id="tab-transmission" class="cw-tabs tab-active transmission" data-tab="transmission">
+						<img src="/img/transmission.png" alt="" />
+					</li>
+
+					<li id="tab-consumption" class="cw-tabs consumption" data-tab="consumption">
+						<img src="/img/consumption.png" alt="" />
+					</li>
+				</ul>
+
+				<div id="generation" class="tab-content generation">
+					<h5 class="tab-title">Generation</h5>
+					<p class="center">In Texas, generation companies turn energy sources (should as coal, nuclear or wind) into electricity for public consumption. This energy is sold on an open market where retail electric providers then market and sell this energy to consumers and businesses.</p>
+				</div>
+				<div id="transmission" class="tab-content transmission tab-open">
+					<h5 class="tab-title">Transmission</h5>
+					<p class="center">Cross Texas is an electric transmission company, which means we operate and maintain transmission lines that deliver bulk power that is distributed by retail electric providers to consumers and businesses.</p>
+				</div>
+				<div id="consumption" class="tab-content consumption">
+					<h5 class="tab-title">Distribution</h5>
+					<p class="center">Distribution is how the power ultimately gets to your home or business. After being delivered in bulk from transmission companies like Cross Texas, it is then distributed through the poles and wires you see in your neighborhood and sold by a retail electric provider.</p>
 				</div>
 			</div>
 		</div>
