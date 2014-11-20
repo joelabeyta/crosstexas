@@ -1,12 +1,14 @@
 <!doctype html>
 <!--[if lt IE 7]> <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html style="margin-top: 0!important;" class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 7]> <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html style="margin-top: 0!important;" class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html style="margin-top: 0!important;" class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Cross Texas | Projects | Salt Fork To Gray</title>
+	<!-- TemplateBeginEditable name="SiteTitle" -->
+	<title>Cross Texas | Texas Energy</title>
+	<!-- TemplateEndEditable -->
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="author" href="/humans.txt">
@@ -21,9 +23,13 @@
 	
 	<script src="/js/modernizr.js"></script>
 </head>
-<body class="salt-fork-to-gray">
+<!-- TemplateBeginEditable name="BodyClass" -->
+<body class="texas-energy">
+<!-- TemplateEndEditable -->
 
-	<header role="banner" style="background-image: url(/img/projects-bg.jpg);">
+	<!-- TemplateBeginEditable name="HeaderImage" -->
+	<header role="banner" style="background-image: url(/img/texas-energy-bg.jpg);">
+	<!-- TemplateEndEditable -->
 		<div class="contain-to-grid">
 			<nav class="top-bar" data-topbar role="navigation">
 				<ul class="title-area">
@@ -86,82 +92,72 @@
 		</div>
 		<div class="page-title-container row">
 			<div class="large-12 columns">
-				<h2 class="page-title">Projects</h2>
+				<!-- TemplateBeginEditable name="PageTitle" -->
+				<h2 class="page-title">Texas Energy</h2>
+				<!-- TemplateEndEditable -->
 			</div>
 		</div>
 	</header>
 
-	<div role="main"><div class="row">
-	<aside class="medium-4 large-4 columns" role="complementary">
-	<ul>
-	<li><a href="/projects/"  title="Projects Overview">Projects Overview</a></li>
-	<li><a href="/projects/limestone-to-gibbons-creek.html"  title="Limestone To Gibbons Creek">Limestone To Gibbons Creek</a></li>
-	<li><a href="/projects/salt-fork-to-gray.html" class="current" title="Salt Fork To Gray">Salt Fork To Gray</a></li>
-	<li><a href="/projects/pattern-panhandle-wind-iii.html"  title="Pattern Panhandle Wind III">Pattern Panhandle Wind III</a></li>
-	<li><a href="/projects/"  title="Landowner Information">Landowner Information</a></li>
-	<li><a href="/projects/existing-transmission-system.html"  title="Existing Transmission System">Existing Transmission System</a></li>
-</ul></aside>
-	<div class="medium-8 large-8 columns page-content">
-		<h3 class="section-title part-green"><b>Salt Fork To Gray:</b><br>
-		Integrating Renewables</h3>
-		<section>
-			<p>Cross Texas plans to build a new 345-kilovolt (kV) single-circuit high-voltage electric transmission line to integrate additional wind energy resources from the Salt Fork Wind, LLC project proposed in Gray and Donley Counties in Texas. Cross Texas intends to file a Certificate of Convenience and Necessity (CCN) application requesting authorization from the Public Utility Commission of Texas (PUCT) to construct and operate this high-voltage electric transmission line. The proposed transmission line will be approximately 25 miles long, connecting the Gray Substation, southwest of Lefors, and Salt Fork Wind’s proposed substation in Donley County.</p>
-		</section>
+	<div role="main">
+		<div class="row">
+			<aside class="medium-4 large-4 columns" role="complementary">
+				<!-- TemplateBeginEditable name="SideBar" -->
+				<ul>
+					<li><a href="/texas-energy/" class="current" title="Texas Energy">Texas Energy</a></li>
+				</ul>
+				<!-- TemplateEndEditable -->
+			</aside>
 
-		<section>
-			<h3 class="section-title">Documents</h3>
-			<a class="doc-download" href="/documents/salt-fork-wind-project-open-house-meeting.pdf" target="_blank">Project Open House Meeting</a>
-			<a class="doc-download" href="/documents/salt-fork-wind-project-questionnaire.pdf" target="_blank">Project Questionnaire</a>
-		</section>
+			<div class="medium-8 large-8 columns page-content">
+				<!-- TemplateBeginEditable name="ContentTitle" -->
+				<h3 class="section-title part-green">Connecting Texas Communiites<br>to A <b>Brighter Future</b></h3>
+				<!-- TemplateEndEditable -->
 
-		<section>
-			<h3 class="section-title">Salt Fork To Gray Route Map</h3>
-
-			<p>The Proposed Route is contained on 3 maps labeled on the image below. <br>
-			For a closer view of the proposed route, click on one of the three sections on the map below.</p>
-			
-			<figure>
-				<img src="/img/salt-fork-map.jpg" alt="" />
-			</figure>
-		</section>
-	</div>
-</div>
-	
+				<section>
+					<!-- TemplateBeginEditable name="PageContent" -->
+					<p>As one of the fastest growing states in the country, Texas has a rapidly expanding need for energy. In fact, Texas produces and consumes more electricity than any other state, which is one of the reasons why the Electric Reliability Council of Texas has determined that the current infrastructure simply isn’t equipped to handle the expected load. </p>
+					<p>Without a doubt, Texas communities need access to renewable, affordable and reliable power. From wind and hydro to geothermal and solar, the Texas-made power sources are there – we just need to bring that supply to the regions that need it most.</p>
+					<p>Cross Texas Transmission has a strong track record for developing projects that not only improve overall grid reliability but actually help increase renewable energy adoption across the state. We have the experience to make the investment in our energy future a complete success.</p>
+					<!-- TemplateEndEditable -->
+				</section>
+			</div>
+		</div>
 		
-					<div class="contact row">
-				<div class="large-12 columns">
-					<h3 class="contact-title borders green">Get In <b>Touch</b></h3>
-				</div>
+		<div class="contact row">
+			<div class="large-12 columns">
+				<h3 class="contact-title borders green">Get In <b>Touch</b></h3>
+			</div>
 
-				<div class="large-12 columns">
-					<div class="row">
-						<div class="contact-section medium-6 large-6 columns">
-							<h3 class="contact-section-title">Ask Us A Question</h3>
-							<p>We’re here to answer your questions about energy and new projects that aim to improve reliability of the Texas electric grid.</p>
-							<a class="contact-button button show-for-small" href="/contact/">Contact Us</a>
-						</div>
-
-						<div class="contact-section medium-6 large-6 columns">
-							<h3 class="contact-section-title">Regulatory Compliance</h3>
-							<p>Cross Texas Transmission adheres to all guidelines set forth by state regulatory groups.</p>
-							<a class="contact-button button show-for-small" href="/regulatory-notices.html">View Notices</a>
-						</div>
+			<div class="large-12 columns">
+				<div class="row">
+					<div class="contact-section medium-6 large-6 columns">
+						<h3 class="contact-section-title">Ask Us A Question</h3>
+						<p>We’re here to answer your questions about energy and new projects that aim to improve reliability of the Texas electric grid.</p>
+						<a class="contact-button button show-for-small" href="/contact/">Contact Us</a>
 					</div>
-				</div>
 
-				<div class="large-12 columns show-for-medium-up">
-					<div class="row">
-						<div class="contact-section medium-6 large-6 columns">
-							<a class="contact-button button" href="/contact/">Contact Us</a>
-						</div>
-
-						<div class="contact-section medium-6 large-6 columns">
-							<a class="contact-button button" href="/regulatory-notices.html">View Notices</a>
-						</div>
+					<div class="contact-section medium-6 large-6 columns">
+						<h3 class="contact-section-title">Regulatory Compliance</h3>
+						<p>Cross Texas Transmission adheres to all guidelines set forth by state regulatory groups.</p>
+						<a class="contact-button button show-for-small" href="/regulatory-notices.html">View Notices</a>
 					</div>
 				</div>
 			</div>
-			</div> <!-- end [role="main"] -->
+
+			<div class="large-12 columns show-for-medium-up">
+				<div class="row">
+					<div class="contact-section medium-6 large-6 columns">
+						<a class="contact-button button" href="/contact/">Contact Us</a>
+					</div>
+
+					<div class="contact-section medium-6 large-6 columns">
+						<a class="contact-button button" href="/regulatory-notices.html">View Notices</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end [role="main"] -->
 	
 	<footer role="contentinfo">
 		<div class="row">

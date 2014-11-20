@@ -1,18 +1,9 @@
-RewriteRule ^verify-empl-contact.php$ $0 [L]
-RewriteRule ^verify-login.php$ $0 [L]
-RewriteRule ^contact/verify.php$ $0 [L]
+RewriteRule ^Form2Mail.asp$ $0 [L]
 
 Options +FollowSymLinks -MultiViews
 
 RewriteEngine On
 RewriteBase /
-
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
-RewriteRule ^ %1/ [R,L]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*?)/?$ $1.php [L]
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
 RewriteRule ^ %1/ [R,L]

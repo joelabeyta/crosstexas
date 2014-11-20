@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -14,7 +13,7 @@
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
 
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/style.min.css?v=130111514" />
+	<link rel="stylesheet" href="/css/style.css?v=130111514" />
 	<link rel="stylesheet" href="/custom-styles.css" />
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="/css/ie.css" />
@@ -102,12 +101,10 @@
 			</aside>
 			<div class="medium-8 large-8 columns page-content">
 				<section>
-					<?php 
-						if(isset($_GET['fail']) && $_GET['fail'] == 1) { echo '<div class="warning">reCAPTCHA blank or entered incorrectly.<br>Please try again.<br><small>ERROR: '.$_GET['error'].'</small></div>'; }
-						if(isset($_GET['fail']) && $_GET['fail'] == 2) { echo '<div class="warning">Please fill in all required fields.</div>'; }
-						if(isset($_GET['fail']) && $_GET['fail'] == 3) { echo '<div class="warning">Something went wrong. Please try again later.</div>'; }
-						if(isset($_GET['success']) && $_GET['success'] == 1) { echo '<div class="success">Thank you for you comments. We will get back with you shortly.</div>'; }
-					?>
+						<!-- <div class="warning">reCAPTCHA blank or entered incorrectly.<br>Please try again.</div> -->
+						<!-- <div class="warning">Please fill in all required fields.</div> -->
+						<!-- <div class="warning">Something went wrong. Please try again later.</div> -->
+						<!-- <div class="success">Thank you for you comments. We will get back with you shortly.</div> -->
 				</section>
 
 				<h3 class="section-title part-green">Get In <b>Touch</b> With Cross Texas</h3>
@@ -133,25 +130,12 @@
 				</section>
 
 				<section>
-					<form class="contact-form cf" method="post" action="verify.php">
-						<?php 
-							function curPageURL() {
-								$pageURL = 'http://';
-								if ($_SERVER["SERVER_PORT"] != "80") {
-									$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-								} else {
-									$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-								}
-								return $pageURL;
-							}
-						?>
-
-						<input type="hidden" name="contact_page" value="<?php echo curPageURL(); ?>" />
+					<form class="contact-form cf" action="../Form2Mail.asp" method="post" id="form1" onsubmit="MM_validateForm('FName','','R','LName','','R','Email','','RisEmail','Zip','','NisNum');return document.MM_returnValue" accept-charset="iso-8859-1">
 
 						<div class="row">
 							<label class="medium-3 large-3 columns" for="inquiry-type">How Can We Help</label>
 							<div class="medium-9 large-9 columns">
-								<select id="inquiry-type" name="inquiry_type">
+								<select id="Devision" name="Devision">
 									<option value="general-inquiry">General Inquiry</option>
 									<option value="public-relations-media-inquiry">Public Relations/Media Inquiry</option>
 									<option value="potential-service-provider">Potential Service Provider</option>
@@ -161,52 +145,53 @@
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns <?php if(isset($_GET['req_field_1'])) { echo 'error'; } ?>" for="field_1">First Name*</label>
+							<label class="medium-3 large-3 columns" for="FName">First Name*</label>
 							<div class="medium-9 large-9 columns">
-								<input id="field_1" <?php if(isset($_GET['req_field_1'])) { echo 'class="error"'; } if(isset($_SESSION['field_1_required'])) { echo 'value="'.$_SESSION['field_1_required'].'"'; } ?> name="field_1_required" type="text" />
-								<?php if(isset($_GET['req_field_1'])) { echo '<small class="error">Required Field</small>'; } ?>
+								<input id="FName" name="FName" type="text" />
 							</div>
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns <?php if(isset($_GET['req_field_2'])) { echo 'error'; } ?>" for="field_2">Last Name*</label>
+							<label class="medium-3 large-3 columns" for="LName">Last Name*</label>
 							<div class="medium-9 large-9 columns">
-								<input id="field_2" <?php if(isset($_GET['req_field_2'])) { echo 'class="error"'; } if(isset($_SESSION['field_2_required'])) { echo 'value="'.$_SESSION['field_2_required'].'"'; } ?> name="field_2_required" type="text" />
-								<?php if(isset($_GET['req_field_2'])) { echo '<small class="error">Required Field</small>'; } ?>
+								<input id="LName" name="LName" type="text" />
 							</div>
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_3">Company</label>
-							<div class="medium-9 large-9 columns"><input id="field_3" name="field_3" type="text" <?php if(isset($_SESSION['field_3'])) { echo 'value="'.$_SESSION['field_3'].'"'; } ?> /></div>
-						</div>
-
-						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_4">Phone Number</label>
-							<div class="medium-9 large-9 columns"><input id="field_4" name="field_4" type="text" <?php if(isset($_SESSION['field_4'])) { echo 'value="'.$_SESSION['field_4'].'"'; } ?> /></div>
-						</div>
-
-						<div class="row">
-							<label class="medium-3 large-3 columns <?php if(isset($_GET['req_field_5'])) { echo 'error'; } ?>" for="field_5">Email*</label>
+							<label class="medium-3 large-3 columns" for="Company">Company</label>
 							<div class="medium-9 large-9 columns">
-								<input id="field_5" <?php if(isset($_GET['req_field_5'])) { echo 'class="error"'; } if(isset($_SESSION['field_5_required'])) { echo 'value="'.$_SESSION['field_5_required'].'"'; } ?> name="field_5_required" type="email" />
-								<?php if(isset($_GET['req_field_5'])) { echo '<small class="error">Required Field</small>'; } ?>
+								<input id="Company" name="Company" type="text" />
 							</div>
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_6">City</label>
-							<div class="medium-9 large-9 columns"><input id="field_6" name="field_6" type="text" <?php if(isset($_SESSION['field_6'])) { echo 'value="'.$_SESSION['field_6'].'"'; } ?> /></div>
+							<label class="medium-3 large-3 columns" for="Phone">Phone Number</label>
+							<div class="medium-9 large-9 columns">
+								<input id="Phone" name="Phone" type="text" />
+							</div>
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_7">Address 1</label>
-							<div class="medium-9 large-9 columns"><input id="field_7" name="field_7" type="text" <?php if(isset($_SESSION['field_7'])) { echo 'value="'.$_SESSION['field_7'].'"'; } ?> /></div>
+							<label class="medium-3 large-3 columns" for="Email">Email*</label>
+							<div class="medium-9 large-9 columns">
+								<input id="Email" name="Email" type="email" />
+							</div>
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_8">Address 2</label>
-							<div class="medium-9 large-9 columns"><input id="field_8" name="field_8" type="text" <?php if(isset($_SESSION['field_8'])) { echo 'value="'.$_SESSION['field_8'].'"'; } ?> /></div>
+							<label class="medium-3 large-3 columns" for="Address">Address 1</label>
+							<div class="medium-9 large-9 columns"><input id="Address" name="Address" type="text" /></div>
+						</div>
+
+						<div class="row">
+							<label class="medium-3 large-3 columns" for="Address2">Address 2</label>
+							<div class="medium-9 large-9 columns"><input id="Address2" name="Address2" type="text" /></div>
+						</div>
+						
+						<div class="row">
+							<label class="medium-3 large-3 columns" for="City">City</label>
+							<div class="medium-9 large-9 columns"><input id="City" name="City" type="text" /></div>
 						</div>
 
 						<div class="row">
@@ -271,27 +256,27 @@
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_9">Zip</label>
-							<div class="medium-9 large-9 columns"><input id="field_9" name="field_9" type="text" <?php if(isset($_SESSION['field_9'])) { echo 'value="'.$_SESSION['field_9'].'"'; } ?> /></div>
+							<label class="medium-3 large-3 columns" for="Zip">Zip</label>
+							<div class="medium-9 large-9 columns"><input id="Zip" name="Zip" type="text" /></div>
 						</div>
 
 						<div class="row">
-							<label class="medium-3 large-3 columns" for="field_text">Comments</label>
+							<label class="medium-3 large-3 columns" for="Comments">Comments</label>
 							<div class="medium-9 large-9 columns">
-								<textarea id="field_text" name="field_text" ><?php if(isset($_SESSION['field_text'])) { echo .$_SESSION['field_text']; } ?></textarea>
+								<textarea id="Comments" name="Comments" ></textarea>
 							</div>
 						</div>
 
 						<p class="required">Required Field*</p>
 
 						<div class="captcha">
+							[captcha]
 							<script type="text/javascript">
-								var RecaptchaOptions = {
-									theme : 'clean'
-								};
+								// var RecaptchaOptions = {
+								// 	theme : 'clean'
+								// };
 							</script>
-							<?php
-							require_once('../recaptchalib.php');
+							<!-- require_once('../recaptchalib.php');
 							// .dev
 							// $publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
 
@@ -301,11 +286,13 @@
 							// .com
 							// $publickey = "6Lemmf0SAAAAAMap-pgMHtzsqrLk1SHVQtOLil9l";
 
-							echo recaptcha_get_html($publickey);
-							?>
+							echo recaptcha_get_html($publickey); -->
 						</div>
 
-						<input class="button" type="submit" value="Submit" />
+						<input type="submit" name="Submit" id="Submit" value="Submit" />
+						<input type="hidden" name="hdwemail" id="hdwemail" value="cfredkin+lspower.com" />
+						<input type="hidden" name="hdwok" id="hdwok" value="thanks.htm" />
+						<input type="hidden" name="hdwnook" id="hdwnook" value="error.htm" />
 					</form>
 				</section>
 
@@ -357,7 +344,7 @@
 			<div class="medium-6 large-6 columns">
 				<img class="footer-logo" src="/img/footer-logo.png" alt="" />
 
-				<a class="login" href="/login.php">Employee Login</a>
+				<a class="login" href="/login.html">Employee Login</a>
 
 				<p class="footer-info">Copyright &copy; 2014 | <a href="/contact/">Contact Us</a> | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/regulatory-notices.html" >Regulatory Notices</a></p>
 			</div>
@@ -379,6 +366,27 @@
 			</div>
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+	<!--
+	function MM_validateForm() { //v4.0
+	  if (document.getElementById){
+	    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+	    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+	      if (val) { nm=val.name; if ((val=val.value)!="") {
+	        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+	          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+	        } else if (test!='R') { num = parseFloat(val);
+	          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+	          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+	            min=test.substring(8,p); max=test.substring(p+1);
+	            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+	      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+	    } if (errors) alert('The following error(s) occurred:\n'+errors);
+	    document.MM_returnValue = (errors == '');
+	} }
+	//-->
+	</script>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="/js/production.min.js"></script>

@@ -3,3 +3,5 @@
 *sass-cache/
 *.log
 js/production.js
+gruntfile.js
+package.json

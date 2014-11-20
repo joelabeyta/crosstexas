@@ -264,25 +264,21 @@ label {
 	width: 50%;
 }
 
-form.logout-form {
-	display: inline-block;
-	width: 50%;
-	text-align: right;
+.logout-button {
+	background-color: transparent;
+	padding: 0 35px 0 0!important;
+	margin: 7px 0 0;
+	float: right;
+	background: right center no-repeat url(/img/logout-icon.png);
+	@include opacity(.5);
+	@include transition(.25s);
+	@include transform(scale(.875));
 
-	input[type=submit] {
+	&:hover {
 		background-color: transparent;
-		padding: 0 35px 0 0!important;
-		margin: 0;
-		background: right center no-repeat url(/img/logout-icon.png);
-		@include opacity(.5);
+		@include opacity(1);
 		@include transition(.25s);
-		@include transform(scale(.875));
-
-		&:hover {
-			@include opacity(1);
-			@include transition(.25s);
-			@include transform(scale(1));
-		}
+		@include transform(scale(1));
 	}
 }
 
@@ -311,17 +307,6 @@ form.login-form {
 
 .logout-button-container {
 	padding: 0 60px;
-}
-
-.logout-button{
-	display: block;
-	background-color: $green;
-	float: right;
-	@include border-radius(5px);
-
-	&:hover {
-		background-color: darken($green, 10%);
-	}
 }
 
 blockquote {

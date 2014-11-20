@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html style="margin-top: 0!important;" class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -14,7 +13,7 @@
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
 
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/style.min.css?v=130111514" />
+	<link rel="stylesheet" href="/css/style.css?v=130111514" />
 	<link rel="stylesheet" href="/custom-styles.css" />
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="/css/ie.css" />
@@ -23,17 +22,6 @@
 		<script src="/js/modernizr.js"></script>
 	</head>
 	<body class="cross-texas-employee-login">
-		<?php 
-			function cw_curPageURL() {
-				$pageURL = 'http://';
-				if ($_SERVER["SERVER_PORT"] != "80") {
-					$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-				} else {
-					$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-				}
-				return $pageURL;
-			}
-		?>	
 		<header role="banner" style="background-image: url(/img/cross-texas-employee-login-bg.jpg);">
 			<div class="contain-to-grid">
 				<nav class="top-bar" data-topbar role="navigation">
@@ -107,63 +95,71 @@
 				<aside class="medium-4 large-4 columns" role="complementary">
 					<ul>
 						<li><a href="login.php"  title="Employee Login">Employee Login</a></li>
-					</ul></aside>
-					<div class="medium-8 large-8 columns page-content">
-						<?php if(isset($_GET['fail']) && $_GET['fail'] == 99) { echo '<section><div class="warning">Incorrect username and/or password. Please try again.</div></section>'; } ?>
-						
-						<?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1 ) {
-							echo '<section>';
-								echo '<div class="success cf"><span class="logged-in-header">Logged In</span>';
-									echo '<form class="logout-form" method="post" action="/verify-login.php">';
-										echo '<input type="hidden" name="contact_page" value="'.cw_curPageURL().'" />';
-										echo '<input type="hidden" name="logout" value="1" />';
-										echo '<input class="button" type="submit" value="Log Out" />';
-										echo '</form>';
-								echo '</div>';
-							echo '</section>';
+					</ul>
+				</aside>
 
-							echo '<section>';
-								include('logged-in-content.html');
-							echo '</section>';
-
-							echo '<section>';
-								include('logged-in-form.php');
-							echo '</section>';
-						} else { ?>
-						
-						<section>
-							<form class="login-form" method="post" action="/verify-login.php">						
-								<input type="hidden" name="contact_page" value="<?php echo cw_curPageURL(); ?>" />
-
-								<div class="row">
-									<label class="medium-3 large-3 columns" for="user_name">User Name</label>
-									<div class="medium-9 large-9 columns"><input id="user_name" name="user_name" type="text" /></div>
-								</div>
-
-								<div class="row">
-									<label class="medium-3 large-3 columns" for="user_pass">Password</label>
-									<div class="medium-9 large-9 columns"><input id="user_pass" name="user_pass" type="text" autocomplete="off" /></div>
-								</div>
-
-								<input class="button" type="submit" value="Log In" />
-							</form>
-						</section>
-
-						<?php } ?>
-
+				<div class="medium-8 large-8 columns page-content">
+					
+					<div class="success cf"><span class="logged-in-header">Logged In</span>
+						<span class="logout-button button">Log Out</span>
 					</div>
 
-				</div>
+					<div class="warning wrong-captcha hide">reCAPTCHA blank or entered incorrectly.<br>Please try again.</div>
+					<div class="warning blank-field hide">Please fill in all required fields.</div>
+					<div class="success hide">Thank you for you comments. We will get back with you shortly.</div>
 
-				
-			</div> <!-- end [role="main"] -->
+					<form class="contact-form hide cf" action="/Form2Mail.asp" method="post" id="form1" onsubmit="MM_validateForm('FName','','R','LName','','R','Email','','RisEmail','Zip','','NisNum');return document.MM_returnValue" accept-charset="iso-8859-1">
+						<div class="row">
+							<label class="medium-3 large-3 columns" for="inquiry-type">Choose one*</label>
+							<div class="medium-9 large-9 columns">
+								<select id="inquiry-type" name="inquiry_type">
+									<option value="">Choose One:</option>
+									<option class="select-dash" disabled="disabled">----</option>
+									<option value="suggestion-comment">Suggestion/Comment</option>
+									<option value="Complaint">Complaint</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row">
+							<label class="medium-3 large-3 columns" for="field_text">Comments*</label>
+							<div class="medium-9 large-9 columns">
+								<textarea id="field_text" name="field_text" placeholder="Please provide an overview of your feedback with as much detail as possible."></textarea>
+							</div>
+						</div>
+
+						<div class="captcha">
+							[captcha]
+							<script type="text/javascript">
+								// var RecaptchaOptions = {
+								// 	theme : 'clean'
+								// };
+							</script>
+								<!-- require_once('recaptchalib.php');
+								// .dev
+								// $publickey = "6LcA2_0SAAAAADuGcAEvsVh_-Z-gZb3jeLzjYA6w";
+
+								// .crane-west.net
+								$publickey = "6Lcf4_0SAAAAAKYRum6Jp-3qqeHN74UaAs6gBw-j";
+
+								// .com
+								// $publickey = "6Lemmf0SAAAAAMap-pgMHtzsqrLk1SHVQtOLil9l";
+
+								echo recaptcha_get_html($publickey); -->
+						</div>
+
+						<input class="button" type="submit" value="Submit" />
+					</form>					
+				</div>
+			</div>
+		</div> <!-- end [role="main"] -->
 			
 			<footer role="contentinfo">
 				<div class="row">
 					<div class="medium-6 large-6 columns">
 						<img class="footer-logo" src="/img/footer-logo.png" alt="" />
 
-						<a class="login" href="/login.php">Employee Login</a>
+						<a class="login" href="/login.html">Employee Login</a>
 
 						<p class="footer-info">Copyright &copy; 2014 | <a href="/contact/">Contact Us</a> | <a href="/privacy-policy.php">Privacy Policy</a> | <a href="/regulatory-notices.php" >Regulatory Notices</a></p>
 					</div>
@@ -189,5 +185,40 @@
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 			<script src="/js/production.min.js"></script>
 			<script src="/custom-js.js"></script>
+
+			<script>
+				$(document).ready(function(){
+					var logged_in = $.cookie('cw_lic');
+					console.log(logged_in);
+
+					if(logged_in != '1') {
+						$('.contact-form ').hide();
+						window.location = "/login.html";
+					} else if(logged_in === '1') {
+						$('.contact-form ').show();
+					}
+				});
+			</script>
+
+			<script type="text/javascript">
+			<!--
+			function MM_validateForm() { //v4.0
+			  if (document.getElementById){
+			    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+			    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+			      if (val) { nm=val.name; if ((val=val.value)!="") {
+			        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+			          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+			        } else if (test!='R') { num = parseFloat(val);
+			          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+			          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+			            min=test.substring(8,p); max=test.substring(p+1);
+			            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+			      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+			    } if (errors) alert('The following error(s) occurred:\n'+errors);
+			    document.MM_returnValue = (errors == '');
+			} }
+			//-->
+			</script>
 		</body>
 		</html>
