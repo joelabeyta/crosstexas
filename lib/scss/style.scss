@@ -781,9 +781,8 @@ small.error {
 	z-index: 1000;
 
 	&.stuck {
-		position: fixed;
-		top: 100px;
-		width: 20%;
+		position: relative;
+		top: 0;
 	}
 }
 
@@ -1040,6 +1039,15 @@ display: table; /* 2 */
 
 	.js-generated {
 		display: none;
+	}
+
+	.sticks {
+		position: relative;
+
+		&.stuck {
+			position: fixed;
+			top: 100px;
+		}
 	}
 
 	[role=banner] {
