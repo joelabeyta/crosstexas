@@ -3844,14 +3844,11 @@ small.error {
 .sticks {
   position: relative;
   background-color: #fff;
-  z-index: 1000;
-  border: 15px solid #fff;
-  margin: -15px !important;
-  width: 100%; }
+  z-index: 1000; }
   .sticks.stuck {
     position: fixed;
     top: 100px;
-    width: 25%; }
+    width: 20%; }
 
 .question {
   color: #017cba;

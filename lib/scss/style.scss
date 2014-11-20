@@ -779,14 +779,11 @@ small.error {
 	position: relative;
 	background-color: #fff;
 	z-index: 1000;
-	border: 15px solid #fff;
-	margin: -15px!important;
-	width: 100%;
 
 	&.stuck {
 		position: fixed;
 		top: 100px;
-		width: 25%;
+		width: 20%;
 	}
 }
 
